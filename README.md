@@ -1,6 +1,6 @@
-# 🌤️ CuacaID
+# 🌤️ Weather_id_v1
 
-Halo! 👋 Ini adalah **CuacaID**, proyek portofolio sederhana yang aku buat untuk belajar bikin web dinamis pakai JavaScript. 
+Halo! 👋 Ini adalah **Weather_id_v1**, proyek portofolio sederhana yang aku buat untuk belajar bikin web dinamis pakai JavaScript. 
 
 Fungsinya simpel aja: buat ngecek kondisi cuaca *real-time* di seluruh ibu kota provinsi yang ada di Indonesia. 
 
