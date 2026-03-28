@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuacaID — Cuaca Seluruh Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ============================
+        HEADER
+  ============================= -->
+    <header>
+      <div class="logo-badge">🇮🇩 Proyek Portofolio</div>
+      <h1>CuacaID</h1>
+      <p>Pantau cuaca real-time di Ibu Kota Provinsi seluruh Indonesia</p>
+    </header>
+
+    <!-- ============================
+        STEP 1 — PILIH PROVINSI
+  ============================= -->
+    <div class="step-card" id="stepProvinsi">
+      <div class="step-label">
+        <span class="step-num">1</span>
+        Pilih Provinsi
+      </div>
+      <div class="select-wrap">
+        <select id="selectProvinsi" onchange="onProvinsiChange()">
+          <option value="">— Pilih Provinsi —</option>
+        </select>
+        <span class="select-icon">▾</span>
+      </div>
+      <div class="loading-inline" id="loadingProvinsi">
+        <div class="dot-spinner"><span></span><span></span><span></span></div>
+        Memuat data provinsi...
+      </div>
+    </div>
+
+    <!-- ============================
+        PESAN ERROR
+  ============================= -->
+    <div class="error-msg" id="errorMsg"></div>
+
+    <!-- ============================
+        LOADING CUACA
+  ============================= -->
+    <div class="loading-weather" id="loadingWeather">
+      <div class="spinner-ring"></div>
+      <p>Mengambil data cuaca<span class="dots">...</span></p>
+    </div>
+
+    <!-- ============================
+        KARTU CUACA
+  ============================= -->
+    <div class="weather-card" id="weatherCard">
+
+      <!-- Info lokasi -->
+      <div class="location-header">
+        <div class="location-info">
+          <div class="location-kota" id="wcKota">—</div>
+          <div class="location-provinsi" id="wcProvinsi">—</div>
+          <div class="location-time" id="wcTime">—</div>
+        </div>
+        <div class="weather-emoji" id="wcEmoji">🌤️</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Suhu utama -->
+      <div class="temp-section">
+        <div class="temp-big"><span id="wcTemp">—</span><sup>°C</sup></div>
+        <div class="temp-desc" id="wcDesc">—</div>
+        <div class="temp-range">
+          <span>⬆️ <span id="wcMax">—</span>°C</span>
+          <span>⬇️ <span id="wcMin">—</span>°C</span>
+          <span>🌡️ Terasa <span id="wcFeels">—</span>°C</span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Stats grid -->
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-ico">💧</div>
+          <div class="stat-val" id="wcHumidity">—</div>
+          <div class="stat-lbl">Kelembapan</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-ico">💨</div>
+          <div class="stat-val" id="wcWind">—</div>
+          <div class="stat-lbl">Angin (km/j)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-ico">👁️</div>
+          <div class="stat-val" id="wcVis">—</div>
+          <div class="stat-lbl">Visibilitas</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-ico">🌫️</div>
+          <div class="stat-val" id="wcCloud">—</div>
+          <div class="stat-lbl">Awan</div>
+        </div>
+      </div>
+
+    </div><!-- /weather-card -->
+
+    <!-- ============================
+        CATATAN API KEY
+  ============================= -->
+    <div class="api-note" id="apiNote">
+      💡 <strong>Untuk data cuaca real-time:</strong> daftar gratis di
+      <a href="https://openweathermap.org/api" target="_blank">openweathermap.org</a>
+      → ganti <code>YOUR_API_KEY</code> di <code>script.js</code>
+    </div>
+
+    <!-- ============================
+        BOX EDUKASI
+  ============================= -->
+    <div class="learn-body">
+      <b>Fetch API & Async/Await</b> — Mengambil data cuaca secara asinkron dari WeatherAPI tanpa menghambat performa
+      halaman.<br>
+      <b>Object Mapping Strategy</b> — Menggunakan pasangan Key-Value untuk menghubungkan ID Provinsi dengan Ibu Kota
+      secara instan dan efisien.<br>
+      <b>Dynamic Content Injection</b> — Memperbarui elemen DOM secara real-time, termasuk penyisipan gambar icon cuaca
+      dinamis melalui URL.<br>
+      <b>Event-Driven Programming</b> — Menggunakan listener <code>onchange</code> untuk memicu alur logika aplikasi
+      segera setelah pengguna memilih wilayah.<br>
+      <b>Data Normalization</b> — Memproses data JSON mentah menjadi informasi yang ramah pengguna (pembulatan suhu,
+      format waktu, dan unit metrik).<br>
+      <b>Robust Error Handling</b> — Menggunakan blok <code>try/catch</code> untuk memastikan aplikasi tetap berjalan
+      stabil meskipun terjadi gangguan API.
+    </div>
+
+  </div><!-- /container -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
