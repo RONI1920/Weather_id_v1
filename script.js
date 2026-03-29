@@ -17,7 +17,7 @@ const IBU_KOTA_MAP = {
     "61": "Pontianak",
     "63": "Banjarmasin",
     "91": "Jayapura"
-}; 
+};
 
 const DAFTAR_PROVINSI_PILIHAN = [
     { id: "11", name: "ACEH" },
@@ -129,4 +129,28 @@ function showError(msg) {
 function resetUI() {
     if (weatherCard) weatherCard.style.display = 'none';
     if (errorMsg) errorMsg.style.display = 'none';
+}
+
+// Function Ganti BackGround
+
+const NoteApi = document.getElementById("Note")
+const semuaJudul = document.querySelectorAll("#Note b")
+
+function ModeGelap() {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    NoteApi.style.color = "white";
+
+    for (let i = 0; i < semuaJudul.length; i++) {
+        semuaJudul[i].style.color = "Yellow";
+    }
+}
+
+
+function ModeTerang() {
+    document.body.style.backgroundColor = "white";
+    NoteApi.style.color = "grey";
+    for (let i = 0; i < semuaJudul.length; i++) {
+        semuaJudul[i].style.color = "black";
+    }
 }

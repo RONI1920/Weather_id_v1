@@ -23,6 +23,15 @@
       <p>Pantau cuaca real-time di Ibu Kota Provinsi seluruh Indonesia</p>
     </header>
 
+    <!-- Tombol Ganti BackGround -->
+    <div class="btn-container">
+      <button onclick="ModeGelap()" class="btn-custom btn-dark">
+        🌙 Mode Gelap
+      </button>
+      <button onclick="ModeTerang()" class="btn-custom btn-light">
+        ☀️ Mode Terang
+      </button>
+    </div>
     <!-- ============================
         STEP 1 — PILIH PROVINSI
   ============================= -->
@@ -123,18 +132,29 @@
     <!-- ============================
         BOX EDUKASI
   ============================= -->
-    <div class="learn-body">
-      <b>Fetch API & Async/Await</b> — Mengambil data cuaca secara asinkron dari WeatherAPI tanpa menghambat performa
+    <div id="Note" class="learn-body">
+      <b class="judul-fitur">Fetch API & Async/Await</b> — Mengambil data cuaca secara asinkron dari WeatherAPI tanpa
+      menghambat
+      performa
       halaman.<br>
-      <b>Object Mapping Strategy</b> — Menggunakan pasangan Key-Value untuk menghubungkan ID Provinsi dengan Ibu Kota
+      <b class="judul-fitur">Object Mapping Strategy</b> — Menggunakan pasangan Key-Value untuk menghubungkan ID
+      Provinsi dengan
+      Ibu Kota
       secara instan dan efisien.<br>
-      <b>Dynamic Content Injection</b> — Memperbarui elemen DOM secara real-time, termasuk penyisipan gambar icon cuaca
+      <b class="judul-fitur">Dynamic Content Injection</b> — Memperbarui elemen DOM secara real-time, termasuk
+      penyisipan gambar
+      icon cuaca
       dinamis melalui URL.<br>
-      <b>Event-Driven Programming</b> — Menggunakan listener <code>onchange</code> untuk memicu alur logika aplikasi
+      <b class="judul-fitur">Event-Driven Programming</b> — Menggunakan listener <code>onchange</code> untuk memicu alur
+      logika
+      aplikasi
       segera setelah pengguna memilih wilayah.<br>
-      <b>Data Normalization</b> — Memproses data JSON mentah menjadi informasi yang ramah pengguna (pembulatan suhu,
+      <b class="judul-fitur">Data Normalization</b> — Memproses data JSON mentah menjadi informasi yang ramah pengguna
+      (pembulatan suhu,
       format waktu, dan unit metrik).<br>
-      <b>Robust Error Handling</b> — Menggunakan blok <code>try/catch</code> untuk memastikan aplikasi tetap berjalan
+      <b class="judul-fitur">Robust Error Handling</b> — Menggunakan blok <code>try/catch</code> untuk memastikan
+      aplikasi tetap
+      berjalan
       stabil meskipun terjadi gangguan API.
     </div>
 
@@ -142,11 +162,11 @@
 
   <script src="script.js"></script>
 
-<!-- Footer -->
-    <footer class="simple-footer">
+  <!-- Footer -->
+  <footer class="simple-footer">
     <p>&copy; 2026 Website Roni Hidayat. All rights reserved.</p>
   </footer>
- 
+
 </body>
 
 
