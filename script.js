@@ -17,7 +17,7 @@ const IBU_KOTA_MAP = {
     "61": "Pontianak",
     "63": "Banjarmasin",
     "91": "Jayapura"
-};
+}; 
 
 const DAFTAR_PROVINSI_PILIHAN = [
     { id: "11", name: "ACEH" },
