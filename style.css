@@ -224,51 +224,38 @@ pointer-events: none;
 
 /* Loading inline di dalam step card */
 .loading-inline {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-top: 12px;
-font-size: 13px;
-color: var(--muted);
+    display: none; /* SEMBUNYIKAN DEFAULT */
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--muted);
 }
 
-/* Dot spinner animasi */
-.dot-spinner {
-display: flex;
-gap: 4px;
+/* Loading cuaca (full) */
+.loading-weather {
+    display: none; /* SEMBUNYIKAN DEFAULT */
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--muted);
+    animation: fadeIn 0.3s ease both;
 }
 
-.dot-spinner span {
-width: 6px;
-height: 6px;
-border-radius: 50%;
-background: var(--primary);
-animation: dotBounce 1.2s ease-in-out infinite;
-}
+/* Spinner lo yang udah keren itu */
 .spinner-ring {
+    display: none; /* Tambahkan ini agar tidak muncul sendirian */
     width: 50px;
     height: 50px;
-    background-color: var(--primary); /* Pake warna biru baru lo */
+    background-color: var(--primary);
     border-radius: 50%;
     margin: 0 auto 20px;
     position: relative;
     animation: pulse-ring 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 }
 
-/* Tambahkan efek bayangan di bawahnya */
-.spinner-ring::before {
-    content: '';
-    position: absolute;
+/* Tampilkan spinner hanya saat parent-nya (loading-weather) aktif */
+.loading-weather .spinner-ring {
     display: block;
-    width: 300%;
-    height: 300%;
-    box-sizing: border-box;
-    margin-left: -100%;
-    margin-top: -100%;
-    border-radius: 50%;
-    background-color: var(--primary);
-    animation: pulse-dot 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    opacity: 0.2;
 }
 
 @keyframes pulse-ring {
