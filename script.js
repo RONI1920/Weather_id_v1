@@ -130,35 +130,3 @@ function resetUI() {
     if (weatherCard) weatherCard.style.display = 'none';
     if (errorMsg) errorMsg.style.display = 'none';
 }
-
-
-footer {
-  margin-top: 40px;
-  padding: 30px 20px;
-  text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #94a3b8; /* Warna abu-abu soft */
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: #38bdf8; /* Warna biru muda yang kontras */
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-footer a:hover {
-  color: #7dd3fc;
-  text-decoration: underline;
-}
-
-.footer-content p {
-  margin: 5px 0;
-}
-
-.footer-links {
-  margin-top: 10px;
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
